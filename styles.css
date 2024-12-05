@@ -1,0 +1,563 @@
+/*general styling*/
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding: 5rem;
+}
+
+body.main {
+  background: url("Images/Background\(4k\).png");
+  background-repeat: no-repeat;
+  background-size: 100%;
+  font-family: "Poppins", sans-serif;
+  color: #545454;
+  margin: 0;
+  min-height: 100vh; 
+  display: flex;
+  flex-direction: column;
+}
+
+/*universal header*/
+
+header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  font-family: "Poppins", sans-serif;
+  font-size: 24px;
+  margin: 0;
+  z-index: 10;
+  transition: background-color 0.9s ease-in-out;
+}
+header.default {
+  background-color: transparent;
+  opacity: 1;
+  border-bottom: 0px;
+  transition: background-color 0.9s ease-in-out;
+}
+header.homeHeader {
+  background-color: #fff;
+  opacity: 1;
+  border-bottom: 0px;
+  transition: background-color 0.9s ease-in-out;
+}
+.navBar {
+  padding-right: 40px;
+  padding-left: 40px;
+  transition: color 0.9s ease-in-out;
+}
+.navDiv {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.icon {
+display: flex;
+align-items: center;
+}
+.icon img {
+display: block;
+}
+p.icon {
+color: #fff;
+}
+p.iconHome {
+  color: #545454;
+}
+span.spanIcon {
+  color: #ffffff;
+  padding-right: 10px;
+  transition: color 0.9s ease-in-out;
+}
+span.spanIconHome {
+  color: #003f7f;
+  padding-right: 10px;
+  transition: color 0.9s ease-in-out;
+}
+ul {
+  margin: 0;
+}
+li.home, li.homeButton {
+  color: #fff;
+  list-style: none;
+  display: inline-block;
+  margin-right: 40px;
+  transition: color 0.9s ease-in-out;
+}
+li.home a{
+  color:white;
+  font-weight: 400;
+  text-decoration: none;
+  transition: color 0.9s ease-in-out;
+}
+li.homeButton a{
+  color:white;
+  font-weight: 400;
+  text-decoration: none;
+  transition: color 0.9s ease-in-out;
+}
+button {
+  background-color:#214796;
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+  font-size: 24px;
+  margin-right: 0;
+  border: 0px;
+  padding: 12px;
+  border-radius: 15px;
+  color:white;
+  text-decoration: none;
+}
+
+/*Light/Scroll Header*/
+
+header.lightHeader {
+  background-color: #fff;
+  opacity: 1;
+  transition: background-color 0.9s ease-in-out;
+}
+.navBarLight {
+  padding-right: 40px;
+  padding-left: 40px;
+  transition: color 0.9s ease-in-out;
+}
+span.spanIconLight {
+  color: #214796;
+  padding-right: 10px;
+  transition: color 0.9s ease-in-out;
+}
+li.lightNav, li.lightButton {
+  list-style: none;
+  display: inline-block;
+  margin-right: 40px;
+  transition: color 0.9s ease-in-out;
+}
+li.lightNav a{
+  color: #545454;
+  font-weight: 400;
+  text-decoration: none;
+  transition: color 0.9s ease-in-out;
+}
+li.lightButton a{
+  color: #fff;
+  text-decoration: none;
+  transition: color 0.9s ease-in-out;
+}
+li.home a.lightNav {
+  color: #545454; 
+  transition: color 0.9s ease-in-out;
+}
+
+
+/*Universal Footer*/
+
+footer {
+  background-color: #214796;
+  width: 100%;
+  padding: 0;
+  margin-top: auto;
+}
+div.footerContainer {
+  width: 45%;
+  padding-top: 10px;
+  padding-bottom: 60px;
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  margin: auto;
+}
+.footerContainer img {
+  margin-top: 5px;
+  align-self: flex-start;
+}
+.footerContainer ul {
+  margin-top: 0;
+}
+li.footerLink {
+  list-style: none;
+  margin-bottom: 0;
+}
+li.footerLink a{
+  color: #fff;
+  text-decoration: none;
+  font-size: 16px;
+  font-weight: 500;
+}
+.footerContainer address {
+  color: #fff;
+}
+img.contactIcons {
+  vertical-align: middle;
+  margin-top: 0;
+  margin-right: 5px;}
+address a {
+  color: #fff;
+  text-decoration: none;}
+div.copyright {
+  background-color: #003f7f;
+  padding: 10px;
+  text-align: center;
+  margin-top:5px;
+}
+div.copyright p {
+  color: white;
+  margin: 0;
+}
+span.designer {
+  opacity: 0.7;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-weight: 400;
+  margin: 0px 5px;
+}
+label.footerLabel {
+  font-weight: 600;
+  color: #fff;
+  font-style: normal;
+  font-size: 24px;
+  border-bottom: 1px solid #fff;
+  margin-bottom: 10px;
+}
+
+/*Login Page */
+
+div.login {
+  background-color: rgba(212, 240, 255, 0.8);
+  width: 15%;
+  padding: 25px 30px 25px 30px;
+  border-radius: 22px;
+  display: block;
+  margin: auto;
+  margin-top: 12%;
+}
+#login {
+  font-weight: 700;
+  font-size: 24px;
+  text-align: center;
+  display: block;
+  width: 100%;
+}
+.loginForm {
+  font-weight: 400;
+  font-size: 18px;
+}
+.loginInput {
+  background-color: rgba(212, 240, 255, 1);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border: 0px;
+  border-radius: 7px;
+  width: 91%;
+  padding: 10px 15px 10px 15px;
+  margin-bottom: 10px;
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+}
+.loginSubmit {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  background-color: #214796;
+  color: #fff;
+  border: 0px;
+  border-radius: 7px;
+  padding: 9px 15px 9px 15px;
+  margin-top: 12px;
+  width: 40%;
+  font-family: "Poppins", sans-serif;
+  font-size: 17px;
+}
+
+/*home title*/
+
+.titleBackground {
+  background: url("Images/turtle.jpg") no-repeat;
+  background-size: 100%;
+  font-family: "Poppins", sans-serif;
+  color: #545454;
+  margin: 0;
+  min-height: 100vh; 
+  display: flex;
+  flex-direction: column;
+}
+.divTitle {
+display: flex;
+align-items: center;
+justify-content: center;
+margin-left: 22%;
+margin-top: 5%;
+margin-bottom: 8%;
+max-width: 50%;
+}
+.pTitle {
+color: #214796;
+font-weight: 700;
+font-size: 160px;
+margin-right: 20px;
+}
+.titleContainer {
+display: flex;
+flex-direction: column;
+text-align: left;
+}
+.spanTitle {
+color: #fff;
+font-weight: 400;
+font-size: 50px;
+line-height: 1.2;
+}
+#spanReadMore {
+  color: #fff;
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 1.2;
+  text-decoration: none;
+}
+#learnMore {
+  padding-left: 5px;
+  vertical-align: middle;
+}
+
+/*home content */
+
+div.content {
+  margin-bottom: 8%;
+  display: block;
+}
+div.whyContainer {
+  margin: auto;
+  max-width: 60%;
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+}
+h1.pWhy {
+  color: #545454;
+  font-size: 70px;
+  font-weight: 600;
+  width: 50%;
+  margin-top: 0;
+  margin-bottom: 0;
+  align-items: flex-start;
+}
+p.whyContent {
+  font-size: 27px;
+  font-weight: 400;
+  width:50%;
+  padding-top: 15px;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+div.goalsContainer {
+  margin: auto;
+  max-width: 60%;
+}
+h2.pGoal {
+  font-family: "Poppins", sans-serif;
+  font-weight: 600;
+  font-size: 50px;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+div.goalsRow {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  font-size: 22px;
+}
+p.goal {
+  width: 50%;
+  padding: 5px;
+  margin-top: 0;
+}
+abbr {
+  text-decoration: none;
+}
+
+/*Projects Content*/
+
+.projectContainer {
+  background-color: rgba(212, 240, 255, 0.8);
+  width: 65%;
+  height: 750px;
+  padding: 25px;
+  border-radius: 22px;
+  display: flex;
+  gap: 15px;
+  margin: auto;
+  margin-top: 5%;
+  margin-bottom: 2%;
+  overflow: hidden;
+}
+#firstColumn {
+  max-width: 40%;
+  height: 100%; 
+}
+#secondColumn {
+  max-width: 30%;
+  height: 100%; 
+}
+#thirdColumn {
+  max-width: 30%;
+  height: 100%; 
+}
+#firstColumn img, #thirdColumn img {
+  width: 100%;
+  height: 100%;
+}
+#secondColumnTop, #secondColumnMid, #secondColumnBot {
+  width: 100%;
+  max-height:32%;
+}
+#secondColumnTop img, #secondColumnMid img, #secondColumnBot img {
+  width: 100%;
+  max-height: 100%;
+}
+#secondColumnMid {
+  margin: 18px 0px 18px 0px;
+}
+
+/*Contact Content*/
+
+div.contactContainer {
+  margin: auto;
+  width: 70%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between; 
+  margin-top: 6%;
+  margin-bottom: 2%;
+}
+div.divContact {
+  color: #fff;
+  width: 50%;
+  padding-right: 100px;
+  align-self: flex-start;
+}
+div.contactForm {
+  background-color: #d4f0ff;
+  border-radius: 15px;
+  width: 90%;
+  padding: 29px;
+}
+div.formContainer {
+  width: 40%;
+  display: flex;
+  justify-content: right;
+}
+p.contactHead {
+  font-size: 100px;
+  font-weight: 500;
+  margin:0;
+}
+p.contactDescription {
+  font-size: 24px;
+  margin: 0;
+}
+.contactAlt {
+  font-size: 20px;
+}
+.contactInput,#concernTextArea {
+  background-color: rgba(212, 240, 255, 1);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border: 0px;
+  border-radius: 7px;
+  width: 95%;
+  padding: 10px 15px 10px 15px;
+  margin-bottom: 10px;
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+  font-size: 18px;
+}
+.contactInput {
+  height: 30px;
+}
+#concernTextArea {
+  height:180px;
+  resize: none;
+}
+#contactSubmit {
+  display: block;
+  margin-left: 0;
+  margin-right: auto;
+  background-color: #214796;
+  color: #fff;
+  border: 0px;
+  border-radius: 7px;
+  padding: 9px 15px 9px 15px;
+  margin-top: 12px;
+  font-family: "Poppins", sans-serif;
+  font-size: 18px;
+}
+
+/*Developers Content*/
+
+body.bodyDev {
+  background-color: #fff;
+  font-family: "Poppins", sans-serif;
+  color: #545454;
+  margin: 0;
+  min-height: 100vh; 
+  display: flex;
+  flex-direction: column;
+}
+div.devContainer {
+  padding-top: 7%;
+  padding-bottom:5%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between; 
+  max-width: 75%;
+  margin: auto;
+}
+div.Keith, div.Ethan {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+div.Keith {
+  align-self: flex-start;}
+div.Keith, div.ethanContainer {
+  width: 129%;
+}
+div.Ethan {
+  text-align: right;
+  margin-top: 50px;
+}
+img.portrait {
+  border-radius: 12px;
+}
+div.Keith img, div.Keith p, div.Ethan img, div.Ethan p {
+  margin: 10px;
+  font-size: 20px;
+}
+div.devContainer a {
+  font-family: "Poppins", sans-serif;
+  font-size: 15px;
+  font-weight: 500;
+  text-decoration: none;
+  color: #214796;
+}
+img.socials {
+  border-radius: 0px;
+  vertical-align: middle;
+}
+p.devText {
+  text-align: right;
+  font-size: 80px;
+  font-weight: 600;
+  color: #214796;
+  margin: 0;
+  line-height: 1;
+}
+p.devIntro {
+  text-align: right;
+  font-size: 40px;
+  color: #545454;
+  margin: 0;
+  line-height: 1;
+}
+p.nameP {
+  color: #214796;
+  font-weight: 600;
+  font-size: 30px;
+}
