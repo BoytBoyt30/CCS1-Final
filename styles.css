@@ -283,7 +283,7 @@ div.login {
 display: flex;
 align-items: center;
 justify-content: center;
-margin-left: 22%;
+margin-left: 19%;
 margin-top: 5%;
 margin-bottom: 8%;
 max-width: 50%;
@@ -349,12 +349,13 @@ p.whyContent {
 }
 div.goalsContainer {
   margin: auto;
+  margin-top: 15px;
   max-width: 60%;
 }
 h2.pGoal {
   font-family: "Poppins", sans-serif;
   font-weight: 600;
-  font-size: 50px;
+  font-size: 40px;
   margin-top: 0;
   margin-bottom: 0;
 }
@@ -378,7 +379,7 @@ abbr {
 .projectContainer {
   background-color: rgba(212, 240, 255, 0.8);
   width: 65%;
-  height: 750px;
+  height: 600px;
   padding: 25px;
   border-radius: 22px;
   display: flex;
@@ -388,43 +389,45 @@ abbr {
   margin-bottom: 2%;
   overflow: hidden;
 }
-#firstColumn {
-  max-width: 40%;
-  height: 100%; 
+#firstColumn, #thirdColumn, #secondColumn {
+  height: 100%;
+  object-fit: contain;
+}
+#firstColumn, #thirdColumn {
+  width: 30%;
 }
 #secondColumn {
-  max-width: 30%;
-  height: 100%; 
-}
-#thirdColumn {
-  max-width: 30%;
-  height: 100%; 
-}
-#firstColumn img, #thirdColumn img {
-  width: 100%;
-  height: 100%;
+  width: 40%;
 }
 #secondColumnTop, #secondColumnMid, #secondColumnBot {
-  width: 100%;
-  max-height:32%;
-}
-#secondColumnTop img, #secondColumnMid img, #secondColumnBot img {
-  width: 100%;
-  max-height: 100%;
+  height: 32%;
 }
 #secondColumnMid {
-  margin: 18px 0px 18px 0px;
+  padding: 12px 0 12px 0;
+}
+#thirdColumnTop {
+  height: 66%;
+  padding-bottom: 12px;
+}
+#thirdColumnBot {
+  height: 32%;
+}
+div.projectContainer img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; 
+  border-radius: 10px;
 }
 
 /*Contact Content*/
 
-div.contactContainer {
+#contactContainer {
   margin: auto;
   width: 70%;
   display: flex;
   align-items: center;
   justify-content: space-between; 
-  margin-top: 6%;
+  margin-top: 5%;
   margin-bottom: 2%;
 }
 div.divContact {
@@ -488,7 +491,29 @@ p.contactDescription {
   font-family: "Poppins", sans-serif;
   font-size: 18px;
 }
-
+#thanksContainer {
+  display: none;
+  margin: auto;
+  width: 70%;
+}
+#contactThanks {
+  font-size: 90px;
+  margin-bottom: 0;
+  color: #fff;
+  text-align: center;
+}
+#thanksDesc {
+  font-size: 24px;
+  margin-top: 0;
+  color: #fff;
+  text-align: center;
+}
+#returnContact {
+  color: #fff;
+  background-color: transparent;
+  text-decoration: underline;
+}
+  
 /*Developers Content*/
 
 body.bodyDev {
@@ -501,8 +526,8 @@ body.bodyDev {
   flex-direction: column;
 }
 div.devContainer {
-  padding-top: 7%;
-  padding-bottom:5%;
+  padding-top: 5%;
+  padding-bottom: 3%;
   display: flex;
   align-items: center;
   justify-content: space-between; 
@@ -515,20 +540,25 @@ div.Keith, div.Ethan {
   justify-content: space-between;
 }
 div.Keith {
-  align-self: flex-start;}
+  align-self: flex-start;
+  text-align: right;
+}
 div.Keith, div.ethanContainer {
-  width: 129%;
+  width: 50%;
 }
 div.Ethan {
-  text-align: right;
+  text-align: left;
   margin-top: 50px;
 }
 img.portrait {
   border-radius: 12px;
 }
-div.Keith img, div.Keith p, div.Ethan img, div.Ethan p {
+div.Keith p, div.Ethan p {
   margin: 10px;
   font-size: 20px;
+}
+img.portrait {
+  margin: 10px;
 }
 div.devContainer a {
   font-family: "Poppins", sans-serif;
@@ -540,9 +570,12 @@ div.devContainer a {
 img.socials {
   border-radius: 0px;
   vertical-align: middle;
+  margin-bottom: 0;
+  margin-left: 10px;
+  margin-right: 10px;
 }
 p.devText {
-  text-align: right;
+  text-align: left;
   font-size: 80px;
   font-weight: 600;
   color: #214796;
@@ -550,7 +583,7 @@ p.devText {
   line-height: 1;
 }
 p.devIntro {
-  text-align: right;
+  text-align: left;
   font-size: 40px;
   color: #545454;
   margin: 0;
