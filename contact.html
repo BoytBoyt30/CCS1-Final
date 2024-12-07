@@ -1,6 +1,8 @@
 <!DOCTYPE html>
 <html>
     <head>
+        <title>SDG 14: Life Below Water</title>
+        <link rel="icon" href="Images/webIcon.png">
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
@@ -32,16 +34,17 @@
             </nav>
         </header>
         <main>
-            <div class="contactContainer">
+            <div id="contactContainer">
                 <div class="divContact">
                     <p class="contactHead">Contact Us</p>
-                    <p class="contactDescription">Need to get in touch with us? Either fill out this form or you can contact us at:
-                    <address class="contactAlt">
-                        <img src="Images/phone-call.png" class="contactIcons" height="20">8631-0966<br>
-                        <img src="Images/gmailfooter.png" class="contactIcons" height="20"><a href="mailto:sdg@neda.gov.ph">sdg@neda.gov.ph</a><br>
-                        <img src="Images/location.png" class="contactIcons" height="20">12 St. J.Escriva Drive, Ortigas Center, Pasig City
-                    </address>
-                    </ul></p>
+                    <p class="contactDescription">
+                        Need to get in touch with us? Either fill out this form or you can contact us at:
+                        <address class="contactAlt">
+                            <img src="Images/phone-call.png" class="contactIcons" height="20">8631-0966<br>
+                            <img src="Images/gmailfooter.png" class="contactIcons" height="20"><a href="mailto:sdg@neda.gov.ph">sdg@neda.gov.ph</a><br>
+                            <img src="Images/location.png" class="contactIcons" height="20">12 St. J.Escriva Drive, Ortigas Center, Pasig City
+                        </address>
+                    </p>
                 </div>
                 <div class="formContainer">
                     <div class="contactForm">
@@ -52,15 +55,24 @@
                             <input class="contactInput" type="email" name="lastName" placeholder="ex. juandelacruz@gmail.com..." required><br>
                             <label class="loginForm">What are your concerns?</label><br>
                             <textarea id="concernTextArea" name="concerns" required></textarea><br>
-                            <input id="contactSubmit" type="submit" value="Submit" onclick="submitForm">
+                            <input id="contactSubmit" type="submit" value="Submit">
                         </form>
                     </div>
                 </div>
             </div>
+            <div id="thanksContainer">
+                <p id="contactThanks">Thank you for getting in touch!</p>
+                <p id="thanksDesc">
+                    Your message has been received by the team. If you'd like to fill up the forms again,
+                    <a id="returnContact" href="contact.html">click here.</a>
+                </p>
+            </div>
         </main>
         <footer>
             <div class="footerContainer">
-                <img src="Images/SDGlogo.png" height="80" width="140">
+                <a href="https://sdgs.un.org/goals">
+                    <img src="Images/SDGlogo.png" height="80" width="147">
+                </a>
                 <ul>
                     <label class="footerLabel">Explore</label><br>
                     <li class="footerLink"><a href="home.php">Home</a></li>
@@ -82,5 +94,7 @@
                 </p>
             </div>
         </footer>
+
+        <script src="script.js"></script>
     </body>
 <html>
