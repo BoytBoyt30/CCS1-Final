@@ -10,8 +10,19 @@
         <link rel="stylesheet" href="styles.css">
     </head>
     <body class="main">
+        <?php
+        session_start(); // Start the session
+        
+        // Handle form submission
+        if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+            $_SESSION['firstName'] = $_POST['firstName'];
+            $_SESSION['lastName'] = $_POST['lastName'];
+        
+            exit();
+        }
+        ?>
         <div class="login">
-            <form action="home.html" method="POST">
+            <form action="home.php" method="POST">
             <label id="login">Welcome!</label><br>
             <label class="loginForm">First Name:</label><br>
             <input class="loginInput" type="text" name="firstName" placeholder="ex. Juan..." required><br>

@@ -10,39 +10,44 @@
         <script src="script.js" defer></script>
     </head>
     <body class="titleBackground">
-        <header class="homeHeader">
-            <nav class="navBar">
+        <header class="lightHeader">
+            <nav class="navBarLight">
                 <div class="navDiv">
                     <div class="icon">
-                        <a href="home.html">
+                        <a href="home.php">
                             <img src="Images/SDG.png" height="80" width="80">
                         </a>
-                        <p class="iconHome">
-                            <span class="spanIconHome">Welcome,</span>
-                            <?php 
-                            $firstName = $_POST["firstName"];
-                            $lastName =  $_POST["lastName"];
-                            echo "$firstName $lastName!"; 
+                        <p class="lightIcon">
+                            <span class="spanIconLight">Welcome,</span>
+                            <?php
+                            session_start(); // Start the session
+                            
+                            // Retrieve session variables
+                            $firstName = $_SESSION['firstName'] ?? 'Guest';
+                            $lastName = $_SESSION['lastName'] ?? '';
+                            echo "$firstName $lastName!";
                             ?>
                         </p>
                     </div>
                     <ul>
-                        <li class="home"><a href="developers.html">The Developers</a></li>
-                        <li class="home"><a href="project.html">Projects</a></li>
-                        <li class="homeButton"><button><a href="contact.html">Contact Us</a></button></li>
+                        <li class="lightNav"><a href="developers.php">The Developers</a></li>
+                        <li class="lightNav"><a href="project.php">Projects</a></li>
+                        <li class="lightButton"><button><a href="contact.php">Contact Us</a></button></li>
                     </ul>
                 </div>
             </nav>
-        </header>
+        </header>    
         <main>
             <div class="divTitle">
-                <p class="pTitle">SDG 14</p>
-                <div class="titleContainer">
-                    <span class="spanTitle">Life Below</span>
-                    <span class="spanTitle">Water</span>
-                    <a href="#contentId" id="spanReadMore">Read More
-                        <img id="learnMore" src="Images/down-arrow.png" height="15px">
-                    </a>
+                <div class="divTitleContainer">
+                    <p class="pTitle">SDG 14</p>
+                    <div class="titleContainer">
+                        <span class="spanTitle">Life Below</span>
+                        <span class="spanTitle">Water</span>
+                        <a href="#contentId" id="spanReadMore">Read More
+                            <img id="learnMore" src="Images/down-arrow.png" height="15px">
+                        </a>
+                    </div>
                 </div>
             </div>        
             <div class="content" id="contentId">
@@ -82,9 +87,9 @@
                 </ul>
                 <address>
                     <label class="footerLabel">Contact Us</label><br>
-                    <img src="Images/phone-call.png" class="contactIcons" height="20">8631-0966<br>
-                    <img src="Images/gmailfooter.png" class="contactIcons" height="20"><a href="mailto:sdg@neda.gov.ph">sdg@neda.gov.ph</a><br>
-                    <img src="Images/location.png" class="contactIcons" height="20">12 St. J.Escriva Drive,<br>
+                    <img src="Images/phone-call.png" class="contactIcons">8631-0966<br>
+                    <img src="Images/gmailfooter.png" class="contactIcons"><a href="mailto:sdg@neda.gov.ph">sdg@neda.gov.ph</a><br>
+                    <img src="Images/location.png" class="contactIcons">12 St. J.Escriva Drive,<br>
                     Ortigas Center, Pasig City
                 </address>
             </div>

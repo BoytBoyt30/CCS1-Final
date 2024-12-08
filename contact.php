@@ -13,22 +13,24 @@
             <nav class="navBar">
                 <div class="navDiv">
                     <div class="icon">
-                        <a href="home.html">
+                        <a href="home.php">
                             <img src="Images/SDG.png" height="80" width="80">
                         </a>
                         <p class="icon">
                             <span class="spanIcon">Welcome,</span>
-                            <?php 
-                            $firstName = $_POST["firstName"];
-                            $lastName =  $_POST["lastName"];
-                            echo "$firstName $lastName!"; 
+                            <?php
+                            session_start(); // Start the session
+                            
+                            // Retrieve session variables
+                            $firstName = $_SESSION['firstName'] ?? 'Guest';
+                            $lastName = $_SESSION['lastName'] ?? '';
                             ?>
                         </p>
                     </div>
                     <ul>
-                        <li class="home"><a href="developers.html">The Developers</a></li>
-                        <li class="home"><a href="project.html">Projects</a></li>
-                        <li class="home"><button><a href="contact.html">Contact Us</a></button></li>
+                        <li class="home"><a href="developers.php">The Developers</a></li>
+                        <li class="home"><a href="project.php">Projects</a></li>
+                        <li class="home"><button><a href="contact.php">Contact Us</a></button></li>
                     </ul>
                 </div>
             </nav>

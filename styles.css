@@ -147,6 +147,9 @@ li.home a.lightNav {
   color: #545454; 
   transition: color 0.9s ease-in-out;
 }
+.lightIcon {
+  color: #545454;
+}
 
 
 /*Universal Footer*/
@@ -167,7 +170,7 @@ div.footerContainer {
   margin: auto;
 }
 .footerContainer img {
-  margin-top: 5px;
+  margin-top: 7px;
   align-self: flex-start;
 }
 .footerContainer ul {
@@ -189,7 +192,9 @@ li.footerLink a{
 img.contactIcons {
   vertical-align: middle;
   margin-top: 0;
-  margin-right: 5px;}
+  margin-right: 5px;
+  height: 17px;
+}
 address a {
   color: #fff;
   text-decoration: none;}
@@ -270,7 +275,7 @@ div.login {
 /*home title*/
 
 .titleBackground {
-  background: url("Images/turtle.jpg") no-repeat;
+  background-color: #fff;
   background-size: 100%;
   font-family: "Poppins", sans-serif;
   color: #545454;
@@ -283,21 +288,31 @@ div.login {
 display: flex;
 align-items: center;
 justify-content: center;
-margin-left: 19%;
-margin-top: 5%;
-margin-bottom: 8%;
-max-width: 50%;
+margin: auto;
+width: 100%;
+background: url("Images/turtle.jpg") no-repeat center center;
+background-size: cover;
+}
+.divTitleContainer {
+  display: flex;
+align-items: center;
+justify-content: center;
+  margin: auto;
+  width: 80%;
 }
 .pTitle {
 color: #214796;
 font-weight: 700;
 font-size: 160px;
-margin-right: 20px;
+width: 50%;
+padding-right: 20px;
+text-align: right;
 }
 .titleContainer {
 display: flex;
 flex-direction: column;
 text-align: left;
+width: 50%;
 }
 .spanTitle {
 color: #fff;
@@ -378,7 +393,7 @@ abbr {
 
 .projectContainer {
   background-color: rgba(212, 240, 255, 0.8);
-  width: 65%;
+  width: 60%;
   height: 600px;
   padding: 25px;
   border-radius: 22px;
@@ -393,14 +408,15 @@ abbr {
   height: 100%;
   object-fit: contain;
 }
-#firstColumn, #thirdColumn {
-  width: 30%;
+#firstColumn, #thirdColumn, #secondColumn {
+  width: 33%;
 }
-#secondColumn {
-  width: 40%;
-}
-#secondColumnTop, #secondColumnMid, #secondColumnBot {
+#secondColumnTop {
   height: 32%;
+  padding-bottom: 12px;
+}
+#secondColumnBot {
+  height: 66%;
 }
 #secondColumnMid {
   padding: 12px 0 12px 0;

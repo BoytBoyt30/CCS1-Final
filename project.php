@@ -13,22 +13,24 @@
             <nav class="navBar">
                 <div class="navDiv">
                     <div class="icon">
-                        <a href="home.html">
+                        <a href="home.php">
                             <img src="Images/SDG.png" height="80" width="80">
                         </a>
                         <p class="icon">
                             <span class="spanIcon">Welcome,</span>
-                            <?php 
-                            $firstName = $_POST["firstName"];
-                            $lastName =  $_POST["lastName"];
-                            echo "$firstName $lastName!"; 
+                            <?php
+                            session_start(); // Start the session
+                            
+                            // Retrieve session variables
+                            $firstName = $_SESSION['firstName'] ?? 'Guest';
+                            $lastName = $_SESSION['lastName'] ?? '';
                             ?>
                         </p>
                     </div>
                     <ul>
-                        <li class="home"><a href="developers.html">The Developers</a></li>
-                        <li class="home"><a href="project.html">Projects</a></li>
-                        <li class="home"><button><a href="contact.html">Contact Us</a></button></li>
+                        <li class="home"><a href="developers.php">The Developers</a></li>
+                        <li class="home"><a href="project.php">Projects</a></li>
+                        <li class="home"><button><a href="contact.php">Contact Us</a></button></li>
                     </ul>
                 </div>
             </nav>
@@ -36,25 +38,32 @@
         <main>
             <div class="projectContainer">
                 <div id="firstColumn">
-                    <img src="Images/keithplacehold.png">
+                    <a href="https://www.rappler.com/environment/city-gentle-people-fights-save-coastal-life-dumaguete-reclamation/" target="_blank">
+                        <img src="Images/NOTO174.png">
+                    </a>
                 </div>
                 <div id="secondColumn">
                     <div id="secondColumnTop">
-                        <img src="Images/keithplacehold.png">
-                    </div>
-                    <div id="secondColumnMid">
-                        <img src="Images/keithplacehold.png">
+                        <a href="https://www.sunstar.com.ph/dumaguete/feature/coastal-clean-up-held-in-dumaguete" target="_blank">
+                            <img src="Images/SunstarCoastalCleanUpDumaguete.png">
+                        </a>
                     </div>
                     <div id="secondColumnBot">
-                        <img src="Images/keithplacehold.png">
+                        <a href="https://www.facebook.com/share/p/19UcKSBTon/" target="_blank">
+                            <img src="Images/PROOCEAN.jpg">
+                        </a>
                     </div>
                 </div>
                 <div id="thirdColumn">
                     <div id="thirdColumnTop">
-                        <img src="Images/keithplacehold.png">
+                        <a href="https://www.gridmagazine.ph/news-feed/in-dumaguete-city-locals-stand-against-proposed-reclamation-project" target="_blank">
+                            <img src="Images/defenseOfMarineProtectedAreas.jpeg">
+                        </a>
                     </div>
                     <div id="thirdColumnBot">
-                        <img src="Images/keithplacehold.png">
+                        <a href="https://www.pna.gov.ph/articles/1207011" target="_blank">
+                            <img src="Images/dumaguete-reef-dome-.png">
+                        </a>
                     </div>
                 </div>
             </div>
@@ -73,9 +82,9 @@
                 </ul>
                 <address>
                     <label class="footerLabel">Contact Us</label><br>
-                    <img src="Images/phone-call.png" class="contactIcons" height="20">8631-0966<br>
-                    <img src="Images/gmailfooter.png" class="contactIcons" height="20"><a href="mailto:sdg@neda.gov.ph">sdg@neda.gov.ph</a><br>
-                    <img src="Images/location.png" class="contactIcons" height="20">12 St. J.Escriva Drive,<br>
+                    <img src="Images/phone-call.png" class="contactIcons">8631-0966<br>
+                    <img src="Images/gmailfooter.png" class="contactIcons"><a href="mailto:sdg@neda.gov.ph">sdg@neda.gov.ph</a><br>
+                    <img src="Images/location.png" class="contactIcons">12 St. J.Escriva Drive,<br>
                     Ortigas Center, Pasig City
                 </address>
             </div>
