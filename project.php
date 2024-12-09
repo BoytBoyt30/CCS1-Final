@@ -19,13 +19,13 @@
                         <p class="icon">
                             <span class="spanIcon">Welcome,</span>
                             <?php
-                            session_start(); // Start the session
-                            
-                            // Retrieve session variables
-                            $firstName = $_SESSION['firstName'] ?? 'Guest';
-                            $lastName = $_SESSION['lastName'] ?? '';
+                                session_start();
+                                echo $_SESSION['firstName'] . " " . $_SESSION['lastName'];
                             ?>
                         </p>
+                        <form action="index.php" method="POST">
+                            <button type="submit" name="submit" class="logout">Log Out</button> <!-- Logout button -->
+                        </form>
                     </div>
                     <ul>
                         <li class="home"><a href="developers.php">The Developers</a></li>
@@ -37,32 +37,57 @@
         </header>
         <main>
             <div class="projectContainer">
+                <!-- First Column -->
                 <div id="firstColumn">
-                    <a href="https://www.rappler.com/environment/city-gentle-people-fights-save-coastal-life-dumaguete-reclamation/" target="_blank">
+                    <a href="https://www.rappler.com/environment/city-gentle-people-fights-save-coastal-life-dumaguete-reclamation/" target="_blank" class="hoverOverlay">
                         <img src="Images/NOTO174.png">
+                        <div class="overlayContent">
+                            <h3>Dumaguete: ‘City of Gentle People’ fights to save coastal life</h2>
+                            <p class="projectDesc">(1st UPDATE) A proposed 174-hectare Smart City reclamation is threatening to alter the life of locals. In this tight-knit community, a people’s movement has emerged to oppose the joint venture between the city government and a private developer.</p>
+                        </div>
                     </a>
                 </div>
+                
+                <!-- Second Column -->
                 <div id="secondColumn">
                     <div id="secondColumnTop">
-                        <a href="https://www.sunstar.com.ph/dumaguete/feature/coastal-clean-up-held-in-dumaguete" target="_blank">
+                        <a href="https://www.sunstar.com.ph/dumaguete/feature/coastal-clean-up-held-in-dumaguete" target="_blank" class="hoverOverlay">
                             <img src="Images/SunstarCoastalCleanUpDumaguete.png">
+                            <div class="overlayContent">
+                                <h3>Coastal clean-up held in Dumaguete</h2>
+                                <p class="projectDesc">GEOTHERMAL leader Energy Development Corporation's (EDC) Binhi Youth Champions recently held their coastal cleanup and waste audit activity at Barangay Calindagan in Dumaguete City, Negros Oriental.</p>
+                            </div>
                         </a>
                     </div>
                     <div id="secondColumnBot">
-                        <a href="https://www.facebook.com/share/p/19UcKSBTon/" target="_blank">
+                        <a href="https://www.facebook.com/share/p/19UcKSBTon/" target="_blank" class="hoverOverlay">
                             <img src="Images/PROOCEAN.jpg">
+                            <div class="overlayContent">
+                                <h3>A Day of Beach Cleanup: Silliman and Docum Bacong</h2>
+                                <p class="projectDesc">Today October 22, 2024 we tackled two sites: Silliman Beach and Docum Bacong. Our first stop was Silliman Beach where the low tide revealed a vast expanse of trash. This was a perfect time to collect as much as we could before the high tide rolled in. After Silliman, we moved on to Docum Bacong. The area was smaller, but we still managed to gather a significant amount of trash. In total, we collected a whopping 312kg of trash today.</p>
+                            </div>
                         </a>
                     </div>
                 </div>
+                
+                <!-- Third Column -->
                 <div id="thirdColumn">
                     <div id="thirdColumnTop">
-                        <a href="https://www.gridmagazine.ph/news-feed/in-dumaguete-city-locals-stand-against-proposed-reclamation-project" target="_blank">
+                        <a href="https://www.gridmagazine.ph/news-feed/in-dumaguete-city-locals-stand-against-proposed-reclamation-project" target="_blank" class="hoverOverlay">
                             <img src="Images/defenseOfMarineProtectedAreas.jpeg">
+                            <div class="overlayContent">
+                                <h3>In Dumaguete city, locals stand in defense of marine protected areas</h2>
+                                <p class="projectDesc">On the afternoon of July 11, concerned citizens from Dumaguete city staged a peaceful rally along Rizal Boulevard, protesting the city’s plans to reclaim 174 hectares of land along the iconic waterfront.</p>
+                            </div>
                         </a>
                     </div>
                     <div id="thirdColumnBot">
-                        <a href="https://www.pna.gov.ph/articles/1207011" target="_blank">
+                        <a href="https://www.pna.gov.ph/articles/1207011" target="_blank" class="hoverOverlay">
                             <img src="Images/dumaguete-reef-dome-.png">
+                            <div class="overlayContent">
+                                <h3>Dumaguete's artificial reef project a triple-win program</h2>
+                                <p class="projectDesc">A five-year artificial reef deployment project that enhances the marine biodiversity of this capital city’s four marine protected areas (MPAs) is a triple-win program that is expected to help address climate change, boost fisherfolks’ livelihood and food security.</p>
+                            </div>
                         </a>
                     </div>
                 </div>

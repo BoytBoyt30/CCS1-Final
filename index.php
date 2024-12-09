@@ -10,19 +10,27 @@
         <link rel="stylesheet" href="styles.css">
     </head>
     <body class="main">
-        <?php
-        session_start(); // Start the session
-        
-        // Handle form submission
-        if ($_SERVER['REQUEST_METHOD'] === 'POST') {
-            $_SESSION['firstName'] = $_POST['firstName'];
-            $_SESSION['lastName'] = $_POST['lastName'];
-        
-            exit();
-        }
-        ?>
+    <?php
+session_start(); // Start the session
+
+// Handle logout if triggered
+if (isset($_POST['submit'])) {
+    session_unset(); // Unset session variables
+    session_destroy(); // Destroy the session
+    header("Location: index.php"); // Redirect back to the login page
+    exit();
+}
+
+// Handle login
+if (isset($_POST['firstName']) && isset($_POST['lastName'])) {
+    $_SESSION['firstName'] = $_POST['firstName'];
+    $_SESSION['lastName'] = $_POST['lastName'];
+    header("Location: home.php"); // Redirect to home page
+    exit();
+}
+?>
         <div class="login">
-            <form action="home.php" method="POST">
+            <form action="index.php" method="POST">
             <label id="login">Welcome!</label><br>
             <label class="loginForm">First Name:</label><br>
             <input class="loginInput" type="text" name="firstName" placeholder="ex. Juan..." required><br>

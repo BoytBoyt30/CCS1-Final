@@ -108,6 +108,11 @@ button {
   color:white;
   text-decoration: none;
 }
+.logout {
+  background-color: transparent;
+  font-size: 15px;
+  color: #fff;
+}
 
 /*Light/Scroll Header*/
 
@@ -150,7 +155,11 @@ li.home a.lightNav {
 .lightIcon {
   color: #545454;
 }
-
+.lightLogout {
+  background-color: transparent;
+  font-size: 15px;
+  color: #545454;
+}
 
 /*Universal Footer*/
 
@@ -429,10 +438,41 @@ abbr {
   height: 32%;
 }
 div.projectContainer img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; 
+    border-radius: 10px;
+    position: relative;
+    z-index: 1;
+}
+p.projectDesc {
+    font-size: 13px;
+}
+.hoverOverlay {
+  position: relative;
+  width: 100%;
+}
+
+.overlayContent {
+  position: absolute;
+  top: 0;
+  left: 0;
   width: 100%;
   height: 100%;
-  object-fit: cover; 
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 1) 100%);
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  z-index: 2;
   border-radius: 10px;
+}
+
+.hoverOverlay:hover .overlayContent {
+  opacity: 1; /* Make the overlay visible when hovered */
 }
 
 /*Contact Content*/

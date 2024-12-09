@@ -19,13 +19,13 @@
                         <p class="lightIcon">
                             <span class="spanIconLight">Welcome,</span>
                             <?php
-                            session_start(); // Start the session
-                            
-                            // Retrieve session variables
-                            $firstName = $_SESSION['firstName'] ?? 'Guest';
-                            $lastName = $_SESSION['lastName'] ?? '';
+                                session_start();
+                                echo $_SESSION['firstName'] . " " . $_SESSION['lastName'];
                             ?>
                         </p>
+                        <form action="index.php" method="POST">
+                            <button type="submit" name="submit" class="lightLogout">Log Out</button>
+                        </form>
                     </div>
                     <ul>
                         <li class="lightNav"><a href="developers.php">The Developers</a></li>
@@ -41,7 +41,7 @@
                     <p class="devIntro">Meet</p>
                     <p class="devText">The Developers</p>
                     <div class="Ethan">
-                        <img src="Images/ethanplacehold.png" class="portrait" height="450" width="310">
+                        <img src="Images/ethan.png" class="portrait" height="450" width="310">
                         <div>
                             <p class="nameP">Ethan Mario T. Abalahin</p>
                             <p>A fun loving guy with a passion for computers. Currently studying BS Computer Science at Silliman University and part of the Badminton Varsity team. Believes that having a healthy body and mind is key to the pursuit of academics. Also loves playing video games and building computers.
@@ -59,7 +59,7 @@
                         <a href="mailto:keithjustincmandal@su.edu.ph">keithjustincmandal@su.edu.ph<img src="Images/gmail.png" class="socials" height="20px"></a><br>
                         <a href="https://www.instagram.com/kjoe.star">@kjoe.star<img src="Images/instagram.png" class="socials"  height="20px"></a>
                     </div>
-                    <img src="Images/keithplacehold.png" class="portrait" height="450" width="310">
+                    <img src="Images/keith.jpg" class="portrait" height="450" width="310">
                 </div>
             </div>
         </main>  

@@ -20,14 +20,13 @@
                         <p class="lightIcon">
                             <span class="spanIconLight">Welcome,</span>
                             <?php
-                            session_start(); // Start the session
-                            
-                            // Retrieve session variables
-                            $firstName = $_SESSION['firstName'] ?? 'Guest';
-                            $lastName = $_SESSION['lastName'] ?? '';
-                            echo "$firstName $lastName!";
+                                session_start();
+                                echo $_SESSION['firstName'] . " " . $_SESSION['lastName'];
                             ?>
                         </p>
+                        <form action="index.php" method="POST">
+                            <button type="submit" name="submit" class="lightLogout">Log Out</button>
+                        </form>
                     </div>
                     <ul>
                         <li class="lightNav"><a href="developers.php">The Developers</a></li>

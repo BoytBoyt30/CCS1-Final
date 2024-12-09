@@ -19,13 +19,13 @@
                         <p class="icon">
                             <span class="spanIcon">Welcome,</span>
                             <?php
-                            session_start(); // Start the session
-                            
-                            // Retrieve session variables
-                            $firstName = $_SESSION['firstName'] ?? 'Guest';
-                            $lastName = $_SESSION['lastName'] ?? '';
+                                session_start();
+                                echo $_SESSION['firstName'] . " " . $_SESSION['lastName'];
                             ?>
                         </p>
+                        <form action="index.php" method="POST">
+                            <button type="submit" name="submit" class="logout">Log Out</button> <!-- Logout button -->
+                        </form>
                     </div>
                     <ul>
                         <li class="home"><a href="developers.php">The Developers</a></li>
