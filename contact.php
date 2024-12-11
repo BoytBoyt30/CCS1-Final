@@ -81,7 +81,7 @@
                 <p id="contactThanks">Thank you for getting in touch!</p>
                 <p id="thanksDesc">
                     Your message has been received by the team. If you'd like to fill up the forms again,
-                    <a id="returnContact" href="contact.html">click here.</a>
+                    <a id="returnContact" href="contact.php">click here.</a>
                 </p>
             </div>
         </main>

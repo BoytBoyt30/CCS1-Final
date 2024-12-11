@@ -18,14 +18,3 @@ returnContact.addEventListener('click', (event) => {
   thanksContainer.style.display = 'none';      //hides thank you div
 });
 
-//this is for projects page for showing content when hovering
-document.querySelectorAll('.hoverOverlay').forEach((link) => {     //using query selectors to access CSS class
-  link.addEventListener('mouseenter', () => {                      //event listener mouseenter for hover over
-      link.querySelector('.overlayContent').style.opacity = '1';   //changes content opacity to 1 to show the overlay content
-  });
-
-  link.addEventListener('mouseleave', () => {                      //event listener mouseleave when not hovering
-      link.querySelector('.overlayContent').style.opacity = '0';   //changes to zero to hide content
-  });
-});
-;
