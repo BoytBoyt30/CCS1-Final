@@ -1,15 +1,20 @@
 <!DOCTYPE html>
 <html>
     <head>
+        <!--Webpage title-->
         <title>SDG 14: Life Below Water</title>
         <link rel="icon" href="Images/webIcon.png">
+
+        <!--Embedded Font from google fonts-->
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+        
+        <!--linked stylesheet-->
         <link rel="stylesheet" href="styles.css">
-        <script src="script.js" defer></script>
     </head>
     <body class="titleBackground">
+        <!--light header to match background color of body-->
         <header class="lightHeader">
             <nav class="navBarLight">
                 <div class="navDiv">
@@ -17,17 +22,21 @@
                         <a href="home.php">
                             <img src="Images/SDG.png" height="80" width="80">
                         </a>
+                        <!--welcome, name-->
                         <p class="lightIcon">
                             <span class="spanIconLight">Welcome,</span>
+                            <!--php code for printing variables from login page-->
                             <?php
                                 session_start();
                                 echo $_SESSION['firstName'] . " " . $_SESSION['lastName'];
                             ?>
                         </p>
+                        <!--logout using forms to make it simple-->
                         <form action="index.php" method="POST">
                             <button type="submit" name="submit" class="lightLogout">Log Out</button>
                         </form>
                     </div>
+                    <!--site navigation-->
                     <ul>
                         <li class="lightNav"><a href="developers.php">The Developers</a></li>
                         <li class="lightNav"><a href="project.php">Projects</a></li>
@@ -37,24 +46,30 @@
             </nav>
         </header>    
         <main>
+            <!--title container for SDG name-->
             <div class="divTitle">
                 <div class="divTitleContainer">
                     <p class="pTitle">SDG 14</p>
                     <div class="titleContainer">
                         <span class="spanTitle">Life Below</span>
                         <span class="spanTitle">Water</span>
+                        
+                        <!--using href to div id to have auto scroll button-->
                         <a href="#contentId" id="spanReadMore">Read More
                             <img id="learnMore" src="Images/down-arrow.png" height="15px">
                         </a>
                     </div>
                 </div>
             </div>        
+
+            <!--content for why we chose this goal, this is where the read more scrolls to-->
             <div class="content" id="contentId">
                 <div class="whyContainer">
                 <h1 class="pWhy">WHY WE CHOSE THIS GOAL</h1>
                 <p class="whyContent">The ocean covers 70% of the surface of the earth. In this vastly unexplored world, we have fish as our food source, ocean habitats that protect us from storms, and planktons that produce our oxygen. Together, we have to protect them to sustain our livelihood and protect marine life.
                 </p>
                 </div>
+                <!--goals content container-->
                 <div class="goalsContainer">
                     <h2 class="pGoal">What we can do</h2>
                     <div class="goalsRow">
@@ -73,10 +88,15 @@
             </div>
         </main>
         <footer>
+            <!--footer content container-->
             <div class="footerContainer">
+
+                <!--SDG main site href-->
                 <a href="https://sdgs.un.org/goals">
                     <img src="Images/SDGlogo.png" height="80" width="147">
                 </a>
+
+                <!--navigation-->
                 <ul>
                     <label class="footerLabel">Explore</label><br>
                     <li class="footerLink"><a href="home.php">Home</a></li>
@@ -84,6 +104,7 @@
                     <li class="footerLink"><a href="project.php">Projects</a></li>
                     <li class="footerLink"><a href="contact.php">Contact Us</a></li>
                 </ul>
+                <!--contact info-->
                 <address>
                     <label class="footerLabel">Contact Us</label><br>
                     <img src="Images/phone-call.png" class="contactIcons">8631-0966<br>
@@ -94,7 +115,7 @@
             </div>
             <div class="copyright">
                 <p>&copy;copyright 2024; designed by 
-                    <span class="designer">Keith Justin C. Mandal | Ethan Mario T. Abalahin</span>
+                    <span class="designer">KEITH JUSTIN C. MANDAL | ETHAN MARIO T. ABALAHIN</span>
                 </p>
             </div>
         </footer>

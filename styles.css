@@ -2,7 +2,7 @@
 
 html {
   scroll-behavior: smooth;
-  scroll-padding: 5rem;
+  scroll-padding: 5rem;            /*for auto scroll on home page, making sure it doesnt scroll too much*/
 }
 
 body.main {
@@ -12,7 +12,7 @@ body.main {
   font-family: "Poppins", sans-serif;
   color: #545454;
   margin: 0;
-  min-height: 100vh; 
+  min-height: 100vh;                    /*min-height is for header to stick to the bottom of the page*/
   display: flex;
   flex-direction: column;
 }
@@ -20,33 +20,29 @@ body.main {
 /*universal header*/
 
 header {
-  position: fixed;
-  top: 0;
+  position: fixed;                      /*fix header on top of page*/
+  top: 0;                                   
   width: 100%;
   font-family: "Poppins", sans-serif;
-  font-size: 24px;
-  margin: 0;
-  z-index: 10;
-  transition: background-color 0.9s ease-in-out;
+  font-size: 24px;          
+  margin: 0;                                       
+  z-index: 10;                          /*making sure it stays on top when scrolling*/
 }
 header.default {
-  background-color: transparent;
+  background-color: transparent;        /*clear header for some pages*/
   opacity: 1;
   border-bottom: 0px;
-  transition: background-color 0.9s ease-in-out;
 }
-header.homeHeader {
+header.homeHeader {      
   background-color: #fff;
   opacity: 1;
   border-bottom: 0px;
-  transition: background-color 0.9s ease-in-out;
 }
 .navBar {
   padding-right: 40px;
   padding-left: 40px;
-  transition: color 0.9s ease-in-out;
 }
-.navDiv {
+.navDiv {                               /*nav container, to space out the "welcome" and the navigation for other pages*/
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -67,12 +63,10 @@ p.iconHome {
 span.spanIcon {
   color: #ffffff;
   padding-right: 10px;
-  transition: color 0.9s ease-in-out;
 }
 span.spanIconHome {
   color: #003f7f;
   padding-right: 10px;
-  transition: color 0.9s ease-in-out;
 }
 ul {
   margin: 0;
@@ -82,21 +76,18 @@ li.home, li.homeButton {
   list-style: none;
   display: inline-block;
   margin-right: 40px;
-  transition: color 0.9s ease-in-out;
 }
 li.home a{
   color:white;
   font-weight: 400;
   text-decoration: none;
-  transition: color 0.9s ease-in-out;
 }
 li.homeButton a{
   color:white;
   font-weight: 400;
   text-decoration: none;
-  transition: color 0.9s ease-in-out;
 }
-button {
+button {                              /*contact us button*/
   background-color:#214796;
   font-family: "Poppins", sans-serif;
   font-weight: 400;
@@ -115,42 +106,35 @@ button {
 }
 
 /*Light/Scroll Header*/
-
-header.lightHeader {
+ 
+header.lightHeader {                  /*alternate header style to match background for other pages*/
   background-color: #fff;
   opacity: 1;
-  transition: background-color 0.9s ease-in-out;
 }
 .navBarLight {
   padding-right: 40px;
   padding-left: 40px;
-  transition: color 0.9s ease-in-out;
 }
 span.spanIconLight {
   color: #214796;
   padding-right: 10px;
-  transition: color 0.9s ease-in-out;
 }
 li.lightNav, li.lightButton {
   list-style: none;
   display: inline-block;
   margin-right: 40px;
-  transition: color 0.9s ease-in-out;
 }
 li.lightNav a{
   color: #545454;
   font-weight: 400;
   text-decoration: none;
-  transition: color 0.9s ease-in-out;
 }
 li.lightButton a{
   color: #fff;
   text-decoration: none;
-  transition: color 0.9s ease-in-out;
 }
 li.home a.lightNav {
   color: #545454; 
-  transition: color 0.9s ease-in-out;
 }
 .lightIcon {
   color: #545454;
@@ -163,7 +147,7 @@ li.home a.lightNav {
 
 /*Universal Footer*/
 
-footer {
+footer {                         /*same footer styling for all pages*/
   background-color: #214796;
   width: 100%;
   padding: 0;
@@ -180,7 +164,7 @@ div.footerContainer {
 }
 .footerContainer img {
   margin-top: 7px;
-  align-self: flex-start;
+  align-self: flex-start;       /*flex-start to put img position on top of the div to align with other footer content*/
 }
 .footerContainer ul {
   margin-top: 0;
@@ -199,14 +183,15 @@ li.footerLink a{
   color: #fff;
 }
 img.contactIcons {
-  vertical-align: middle;
+  vertical-align: middle;        /*vertically align the icons to the middle with the content in address*/
   margin-top: 0;
   margin-right: 5px;
   height: 17px;
 }
 address a {
   color: #fff;
-  text-decoration: none;}
+  text-decoration: none;
+}
 div.copyright {
   background-color: #003f7f;
   padding: 10px;
@@ -219,7 +204,6 @@ div.copyright p {
 }
 span.designer {
   opacity: 0.7;
-  text-transform: uppercase;
   letter-spacing: 1px;
   font-weight: 400;
   margin: 0px 5px;
@@ -227,7 +211,6 @@ span.designer {
 label.footerLabel {
   font-weight: 600;
   color: #fff;
-  font-style: normal;
   font-size: 24px;
   border-bottom: 1px solid #fff;
   margin-bottom: 10px;
@@ -257,7 +240,7 @@ div.login {
 }
 .loginInput {
   background-color: rgba(212, 240, 255, 1);
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);  /*to have a visual separation with the container*/
   border: 0px;
   border-radius: 7px;
   width: 91%;
@@ -289,65 +272,63 @@ div.login {
   font-family: "Poppins", sans-serif;
   color: #545454;
   margin: 0;
-  min-height: 100vh; 
+  min-height: 100vh;                  
   display: flex;
   flex-direction: column;
 }
 .divTitle {
-display: flex;
-align-items: center;
-justify-content: center;
-margin: auto;
-width: 100%;
-background: url("Images/turtle.jpg") no-repeat center center;
-background-size: cover;
-}
-.divTitleContainer {
   display: flex;
-align-items: center;
-justify-content: center;
+  align-items: center;
+  justify-content: center;
   margin: auto;
-  width: 80%;
+  width: 100%;
+  background: url("Images/turtle.jpg") no-repeat center center;
+  background-size: cover;
 }
-.pTitle {
-color: #214796;
-font-weight: 700;
-font-size: 160px;
-width: 50%;
-padding-right: 20px;
-text-align: right;
+.divTitleContainer {         /*container for the "SDG 14: Life below water" text*/
+  display: flex;             /*to properly positon title elements side by side*/
+  align-items: center;
+  justify-content: center;
+  margin: auto;
+  width: 100%;
 }
-.titleContainer {
-display: flex;
-flex-direction: column;
-text-align: left;
-width: 50%;
+.pTitle {                   /*SDG 14 element*/
+  color: #214796;
+  font-weight: 700;
+  font-size: 160px;
+  width: 50%;
+  padding-right: 20px;
+  text-align: right;
 }
-.spanTitle {
-color: #fff;
-font-weight: 400;
-font-size: 50px;
-line-height: 1.2;
+.titleContainer {           /*contains the "life below water" and "read more" elements*/
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+  width: 50%;
 }
-#spanReadMore {
+.spanTitle {                 
   color: #fff;
   font-weight: 400;
-  font-size: 15px;
-  line-height: 1.2;
+  font-size: 50px;
+}
+#spanReadMore {              /*the auto scroll href*/
+  color: #fff;
+  font-weight: 400;
+  font-size: 15px;     
   text-decoration: none;
 }
-#learnMore {
+#learnMore {                 /*arrow down image positioning*/
   padding-left: 5px;
   vertical-align: middle;
 }
 
 /*home content */
 
-div.content {
+div.content {                      /*this is where the read more scrolls to*/
   margin-bottom: 8%;
   display: block;
 }
-div.whyContainer {
+div.whyContainer {                 /*contains why title and reason elements*/
   margin: auto;
   max-width: 60%;
   display: flex;
@@ -371,7 +352,7 @@ p.whyContent {
   margin-top: 0;
   margin-bottom: 0;
 }
-div.goalsContainer {
+div.goalsContainer {                /*contains the what we can do elements*/
   margin: auto;
   margin-top: 15px;
   max-width: 60%;
@@ -400,7 +381,7 @@ abbr {
 
 /*Projects Content*/
 
-.projectContainer {
+.projectContainer {                                 /*contains all images and overlay content*/
   background-color: rgba(212, 240, 255, 0.8);
   width: 60%;
   height: 600px;
@@ -413,71 +394,72 @@ abbr {
   margin-bottom: 2%;
   overflow: hidden;
 }
-#firstColumn, #thirdColumn, #secondColumn {
+#firstColumn, #thirdColumn, #secondColumn { 
+  position: relative;         /*to ensure all contents dont overflow the container*/
   height: 100%;
-  object-fit: contain;
-}
-#firstColumn, #thirdColumn, #secondColumn {
   width: 33%;
 }
-#secondColumnTop {
+#firstColumn, #secondColumnTop, #secondColumnBot, #thirdColumnTop, #thirdColumnBot {
+  position: relative;
+}
+#secondColumnTop {                                  /*top content for 2nd column*/
   height: 32%;
   padding-bottom: 12px;
 }
-#secondColumnBot {
+#secondColumnBot {                                   /*bottom content for 2nd column*/
   height: 66%;
 }
-#secondColumnMid {
-  padding: 12px 0 12px 0;
-}
-#thirdColumnTop {
+#thirdColumnTop {                                    /*same with second column style*/
   height: 66%;
   padding-bottom: 12px;
 }
 #thirdColumnBot {
   height: 32%;
 }
-div.projectContainer img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover; 
-    border-radius: 10px;
-    position: relative;
-    z-index: 1;
-}
-p.projectDesc {
-    font-size: 13px;
-}
-.hoverOverlay {
-  position: relative;
-  width: 100%;
-}
-
-.overlayContent {
-  position: absolute;
-  top: 0;
-  left: 0;
+div.projectContainer img {                           /*to make sure images will not overflow*/
   width: 100%;
   height: 100%;
-  background: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 1) 100%);
+  border-radius: 10px;
+  z-index: 1;
+}
+.eachProjectTitle {
+  padding-left: 5px;
+  margin: 0;
+  text-align: left;
+}
+.projectDesc {
+  padding-left: 5px;
+  font-size: 12px;
+  margin: 0;
+}
+.hoverOverlay {
+  width: 100%;
+}
+.contentHover {                                   /*styling for content when hovered*/  
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(212, 240, 255, 0.2); 
   color: #fff;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   opacity: 0;
-  transition: opacity 0.3s ease;
-  z-index: 2;
-  border-radius: 10px;
+  transition: opacity 0.3s;                        /*hover transition*/
+  z-index: 2;                                      /*make sure its over the images*/
+  border-radius: 10px
 }
 
-.hoverOverlay:hover .overlayContent {
-  opacity: 1; /* Make the overlay visible when hovered */
+.hoverOverlay:hover .contentHover {
+  opacity: 1;                                      /*show content when hovered*/
 }
 
 /*Contact Content*/
 
-#contactContainer {
+#contactContainer {                                /*contact contents container*/
   margin: auto;
   width: 70%;
   display: flex;
@@ -492,7 +474,7 @@ div.divContact {
   padding-right: 100px;
   align-self: flex-start;
 }
-div.contactForm {
+div.contactForm {                                   /*forms styling*/
   background-color: #d4f0ff;
   border-radius: 15px;
   width: 90%;
@@ -515,9 +497,9 @@ p.contactDescription {
 .contactAlt {
   font-size: 20px;
 }
-.contactInput,#concernTextArea {
+.contactInput,#concernTextArea {                   /*input areas*/
   background-color: rgba(212, 240, 255, 1);
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);      /*box-shadow for visual separation*/
   border: 0px;
   border-radius: 7px;
   width: 95%;
@@ -534,7 +516,7 @@ p.contactDescription {
   height:180px;
   resize: none;
 }
-#contactSubmit {
+#contactSubmit {                                   /*submit button*/
   display: block;
   margin-left: 0;
   margin-right: auto;
@@ -572,7 +554,7 @@ p.contactDescription {
   
 /*Developers Content*/
 
-body.bodyDev {
+body.bodyDev {                         /*different styling for dev page*/
   background-color: #fff;
   font-family: "Poppins", sans-serif;
   color: #545454;
@@ -581,7 +563,7 @@ body.bodyDev {
   display: flex;
   flex-direction: column;
 }
-div.devContainer {
+div.devContainer {                      /*dev content container*/
   padding-top: 5%;
   padding-bottom: 3%;
   display: flex;
@@ -590,7 +572,7 @@ div.devContainer {
   max-width: 75%;
   margin: auto;
 }
-div.Keith, div.Ethan {
+div.Keith, div.Ethan {                   /*spacing between devs*/
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -636,7 +618,7 @@ p.devText {
   font-weight: 600;
   color: #214796;
   margin: 0;
-  line-height: 1;
+  line-height: 1;                   /*adjust spacing around text to put it closer*/
 }
 p.devIntro {
   text-align: left;
